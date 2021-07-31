@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusedByDefault="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".ItemDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_rounded_shape"
+            android:orientation="vertical"
+            android:layout_marginTop="-50dp"
+            android:paddingTop="22dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/itemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginHorizontal="22dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="22sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginHorizontal="22dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/itemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="22sp" />
+
+                        <ImageView
+                            android:id="@+id/removeItem"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/circle"
+                            android:src="@drawable/ic_baseline_remove_24"
+                            android:padding="6dp"
+                            android:layout_marginEnd="62dp"
+                            android:layout_alignParentEnd="true"
+                            app:tint="@color/colorPrimaryDark" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/itemCount"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:layout_marginEnd="36dp"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/addItem"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/circle_fill"
+                            android:src="@drawable/ic_baseline_add_24"
+                            android:padding="6dp"
+                            android:layout_alignParentEnd="true"
+                            app:tint="@color/colorWhite" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/itemDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center|start"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Size varient"
+                            android:gravity="center|start"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/ic_checklist"
+                            android:padding="3dp"
+                            android:layout_marginStart="10dp" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginTop="18dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mediumCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="18dp"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="2dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/mediumText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Medium"
+                                    android:layout_marginTop="3dp"
+                                    android:paddingHorizontal="12dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/largeCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="18dp"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="2dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/largeText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Large"
+                                    android:layout_marginTop="3dp"
+                                    android:paddingHorizontal="12dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/familyCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="18dp"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="2dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/familyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Family"
+                                    android:layout_marginTop="3dp"
+                                    android:paddingHorizontal="12dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="22dp"
+                        android:background="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/extra1Check"
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/black_circle" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra1Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Extra Cheese"
+                                android:gravity="center|start"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra1Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Rs. 20"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="center|start"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/extra2Check"
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/black_circle" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra2Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Thick Crust"
+                                android:gravity="center|start"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra2Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Rs. 25"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="center|start"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/extra3Check"
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/black_circle" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra3Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Thin Crust"
+                                android:gravity="center|start"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/extra3Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Rs. 15"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="center|start"
+                                android:layout_marginStart="12dp"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginTop="22dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardElevation="0dp">
+
+                        <EditText
+                            android:id="@+id/itemComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@color/colorTransparent"
+                            android:hint="Add a special note like less spicy or no Salad ?"
+                            android:gravity="top|start" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/placeOrderBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="22dp"
+                        app:cardBackgroundColor="@color/colorPrimaryDark"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Add To Order"
+                                android:layout_marginStart="22dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/totalPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Rs. 1000"
+                                android:layout_marginEnd="22dp"
+                                android:gravity="center"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
